@@ -4,6 +4,9 @@ Created on Wed Dec  5 10:13:13 2018
 
 @author: 612436198
 """
+
+import sys
+
 #class Customer(object):
 #    
 #    def __init__(self, name, balance=0.0):
@@ -191,44 +194,78 @@ Created on Wed Dec  5 10:13:13 2018
 
 #Association
 
-class Animal():
-    def eat(self):
-        print("yum")
-class Dog(Animal):
-    def __init__(self, name, age):
+#class Animal():
+#    def eat(self):
+#        print("yum")
+#class Dog(Animal):
+#    def __init__(self, name, age):
+#        self.name = name
+#        self.age = age
+#    def bark(self):
+#        print("Woof!")
+#
+#class Robot():
+#    def move(self):
+#        print("... move move move ...")
+#class CleanRobot(Robot):
+#    def clean(self):
+#        print("I vacuum dust")
+#
+#class SuperRobot():
+#    def __init__(self, name, age):
+#        #This class contains 3 objects.
+#        self.name = name
+#        self.age = age
+#        
+#        self.o1 = Robot()
+#        self.o2 = Dog(name, age)
+#        self.o3 = CleanRobot()
+#    def playGame(self):
+#        print("alphago game")
+#    def move(self):
+#        return self.o1.move() #using robot class method
+#    def bark(self):
+#        return self.o2.bark() #using dog class method
+#    def clean(self):
+#        return self.o3.clean() #using cleanrobot class method
+#
+#name = input("pet's name: ")
+#age = int(input("pet's age: "))
+#    
+#machineDog = SuperRobot(name, age)
+#machineDog.move()
+#machineDog.bark()
+
+#Back to the Christmas present example above, to illustrate use of sys:
+
+class FamilyMember():
+    def __init__(self, name, budget=0):
         self.name = name
-        self.age = age
-    def bark(self):
-        print("Woof!")
+        self.budget = budget
+    def isPresentRequired(self):
+        presentBought = input("Have you bought {} a present yet? (Type y for yes, n for no.) ".format(self.name))
+        if presentBought == "y":
+            budgetSpent = input("How much did you spend on it? £")
+            self.budget = self.budget - int(budgetSpent)
+            if self.budget > 0:
+                return "You have £{} left to spend on {}.".format(self.budget, self.name)
+            elif self.budget == 0 and (self.name == "the Elleringtons" or self.name == "Grandma, Jan and Chris"):
+                return "{} are sorted!".format(self.name)
+            elif self.budget == 0:
+                return "{} is sorted!".format(self.name)
+            else:
+                return "Whoops! You spent too much."
+        else:
+            return "Get on with it!"
 
-class Robot():
-    def move(self):
-        print("... move move move ...")
-class CleanRobot(Robot):
-    def clean(self):
-        print("I vacuum dust")
+name = sys.argv[1] #1 rather than 0 here because you've typed 'python' followed by the file name, followed by some inputs in the command line and so the file name is at position 0.
+budget = sys.argv[2]
+print(name)
+print(budget)
 
-class SuperRobot():
-    def __init__(self, name, age):
-        #This class contains 3 objects.
-        self.name = name
-        self.age = age
-        
-        self.o1 = Robot()
-        self.o2 = Dog(name, age)
-        self.o3 = CleanRobot()
-    def playGame(self):
-        print("alphago game")
-    def move(self):
-        return self.o1.move() #using robot class method
-    def bark(self):
-        return self.o2.bark() #using dog class method
-    def clean(self):
-        return self.o3.clean() #using cleanrobot class method
+familyMemberNoOne = FamilyMember(name, budget)
+familyMemberNoTwo = FamilyMember(name, budget) #etc, etc
 
-name = input("pet's name: ")
-age = int(input("pet's age: "))
-    
-machineDog = SuperRobot(name, age)
-machineDog.move()
-machineDog.bark()
+#So you can make it so that each time new input is added, a new familyMemberNo** variable is created.
+#The attributes of the familyMemberNo** variables are the generic name, budget in order to enable this to happen - putting the specific input in for each variable every time would be complicated.
+#The order in which things happens is important here!
