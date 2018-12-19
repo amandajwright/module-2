@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Dec 11 14:00:53 2018
 
-@author: 612436198
-"""
 
 def DataBundlePurchase(truePasscode, balance):
     if passwordCheck(truePasscode):
@@ -11,20 +7,22 @@ def DataBundlePurchase(truePasscode, balance):
         if choice == "1" and checkBalance(balance):
             return "Your balance is {}.".format(balance)
         elif choice == "1" and not checkBalance(balance):
-            return "Your balance is not sufficient to purchase a data bundle: {}.".format(balance)
-        else:
+            return "Your balance of {} is not sufficient to purchase a data bundle.".format(balance)
+        elif choice == "2":
             if phoneNumberInput() == False:
                 return "The numbers still don't match. Please try again later."
             else:
                 transactionResultReason = transactionApproval(balance)
                 if transactionResultReason == "balanceExceeded":
-                    return "You have exceeded your balance."
+                    return "The amount you entered exceeds your balance of £{}. Please try again".format(balance)
                 elif transactionResultReason == "maxAmountExceeded":
-                    return "You have exceed the maximum amount."
+                    return "You have exceed the maximum amount of £100."
                 elif transactionResultReason == "multipleOfFiveFail":
-                    return "The amount you entered is not divisible by five."
+                    return "The amount you entered is not divisible by five. Please try again."
                 else:
                     return str(transactionResultReason)
+        else:
+            return "There seems to be a problem. Please try again later."
     else:
         return "Wrong password."
     
@@ -51,7 +49,7 @@ def phoneNumberInput():
     if firstNumber == secondNumber:
         return (True, secondNumber)
     else:
-        print("Sorry, the numbers don't match.")
+        print("\nSorry, the numbers don't match.")
         firstNumber = input("Please type your phone number: ")
         secondNumber = input("Please type your phone number again: ")
         if firstNumber == secondNumber:
@@ -60,7 +58,7 @@ def phoneNumberInput():
             return False
         
 def dataBundleTransaction():
-    print("The maximum amount you can spend on data in one go is £100.")
+    print("\nThe maximum amount you can spend on data in one go is £100.")
     dataAmountRequested = float(input("How much would you like to spend today?\n£"))
     return dataAmountRequested
 

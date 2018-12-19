@@ -1,15 +1,11 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Dec 11 14:00:53 2018
 
-@author: 612436198
-"""
 
 def DataBundlePurchase(truePasscode, balance):
     if passwordCheck(truePasscode):
         return transactionChoice(balance)
     else:
-        print "Sorry, you have not entered a password that matches our records. Please check and try again later."
+        print("Sorry, you have not entered a password that matches our records. Please check and try again later.")
         return "Transaction terminated due to incorrect password."
     
 def passwordCheck(truePasscode):
@@ -41,13 +37,13 @@ def transactionChoice(balance):
     
     elif choice == "2":
         if phoneNumberInput() == False:
-            print "The numbers still don't match. Please try again later."
+            print("The numbers still don't match. Please try again later.")
             return "Transaction terminated due to mismatching phone numbers."
         else:
             return transactionResponse(balance)
     
     else:
-        print "There seems to be a problem. Please try again later."
+        print("There seems to be a problem. Please try again later.")
         return "Transaction terminated due to input of nonexistent choice."
 
 def checkBalance(balance):
@@ -87,7 +83,8 @@ def transactionApproval(balance):
         transactionResultReason = "multipleOfFiveFail"
     else:
         amountRemaining = round((balance - dataAmountRequested), 2)
-        transactionResultReason = "Thank you for your purchase. Your remaining balance is £{}. Have a good day.".format(amountRemaining)
+        print("Thank you for your purchase. Your remaining balance is £{}. Have a good day.".format(amountRemaining))
+        transactionResultReason = "successfulTransaction"
     return transactionResultReason
 
 def nextAction(balance):
@@ -96,17 +93,17 @@ def nextAction(balance):
     
     if nextAction == "1":
         if phoneNumberInput() == False:
-            print "The numbers still don't match. Please try again later."
+            print("The numbers still don't match. Please try again later.")
             return "Transaction terminated due to mismatching phone numbers."
         else:
             return transactionResponse(balance)
     
     elif nextAction == "2":
-        print "Thank you. Hope to see you again soon."
+        print("Thank you. Hope to see you again soon.")
         return "Transaction terminated by customer's choice." 
     
     else:
-        print "Sorry there seems to be a problem, please try again later."
+        print("Sorry there seems to be a problem, please try again later.")
         return "Transaction terminated due to nonexistent choice input."
 
 def transactionResponse(balance):
@@ -114,19 +111,19 @@ def transactionResponse(balance):
     transactionResultReason = transactionApproval(balance)
     
     if transactionResultReason == "negativeAmount":
-        print "The amount you entered was a negative amount. Please try again."
+        print("The amount you entered was a negative amount. Please try again.")
         return "Transaction terminated due to a negative amount having been entered."
     
     elif transactionResultReason == "balanceExceeded":
-        print "The amount you entered exceeds your balance of £{}. Please try again".format(balance)
+        print("The amount you entered exceeds your balance of £{}. Please try again".format(balance))
         return "Transaction terminated due to amount entered exceeding customer balance."
     
     elif transactionResultReason == "maxAmountExceeded":
-        print "You have exceed the maximum amount of £100."
+        print("You have exceed the maximum amount of £100.")
         return "Transaction terminated due to amount entered exceeding maximum amount."
     
     elif transactionResultReason == "multipleOfFiveFail":
-        print "The amount you entered is not divisible by five. Please try again."
+        print("The amount you entered is not divisible by five. Please try again.")
         return "Transaction terminated due to amount entered not being divisible by five."
     
     else:

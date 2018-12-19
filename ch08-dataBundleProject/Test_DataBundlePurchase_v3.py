@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Dec 11 13:59:08 2018
 
-@author: 612436198
-"""
 
 from SimpleBundlePurchase_v3 import DataBundlePurchase
 
