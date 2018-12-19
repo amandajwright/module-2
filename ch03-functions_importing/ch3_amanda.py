@@ -30,11 +30,11 @@ Created on Thu Nov 29 13:55:59 2018
 #print("Hello {} {}!".format(firstName,lastName))
 #
 ##Using input and format functions together retrieving more than one piece of info from one answer.
-#print("Please type your name and where you're from separated by a comma.")
-#namePlace = input()
-#namePlaceList = namePlace.split(",")
-#print("Hello {} from {}.".format(namePlaceList[0], namePlaceList[1]))
-#
+print("Please type your name and where you're from separated by a comma.")
+namePlace = input()
+namePlaceList = namePlace.split(",")
+print("Hello {} from {}.".format(namePlaceList[0], namePlaceList[1]))
+
 ##Writing your first function.
 #def hello_world():
 #    print("Hello World!")
@@ -114,7 +114,7 @@ Created on Thu Nov 29 13:55:59 2018
 #
 #say_this(noun, colourOne, colourTwo)
 #
-##Functions with different numbers of arguments.
+##Task 3: Using range() with arguments
 #print(list(range(10)))
 #print(list(range(1,10)))
 #print(list(range(1,10,2)))
@@ -129,7 +129,7 @@ Created on Thu Nov 29 13:55:59 2018
 #    
 #add_two_input_nos()
 #
-##Task 3
+##Lecture task
 #def add_two_numbers():
 #    numberOne = 3
 #    numberTwo = 4

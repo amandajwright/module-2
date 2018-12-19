@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Dec  3 15:46:07 2018
 
-@author: 612436198
-"""
 
 def hello_world():
     print("Hello World!")
@@ -15,10 +11,12 @@ def initials():
     secondName = input()
     print("Your initials are: " + firstName[0] + secondName[0])
 
+#Task 2: Write your first function
+
 def myName():
     print("Amanda")
     print(2+2)
-
+    
 def secondMyName():
     print("What's your name?")
     myName = input()
@@ -48,13 +46,16 @@ def add_two_input_nos():
     print(int(firstNumberTyped) + int(secondNumberTyped))
 
 def add_two_numbers():
-    numberOne = 3
-    numberTwo = 4
-    answer = numberOne + numberTwo
-    print(answer)
+    number1 = 3
+    number2 = 4
+    answer = number1 + number2
+    print("{} plus {} is {}".format(number1, number2, answer))
 
-def add_two_numbers_from_args(a, b):
-    print(a + b)
+#Task 4: Adding two numbers together
+
+def add_two_numbers_from_args(number1, number2):
+    answer = number1 + number2
+    print("{} plus {} is {}".format(number1, number2, answer))
 
 def convert_distance(miles):
     kilometers = (miles * 8.0) / 5.0
@@ -68,6 +69,8 @@ Ipswich_to_London = convert_distance_again(10)
 def distanceIpswichToLondon():
     return "The distance from Ipswich to London {}".format(Ipswich_to_London)
 
+#Task 5: Temperature conversion
+
 def convert_temperature(centigrade):
     fahrenheit = centigrade * 9.0 / 5.0 + 32
     kelvin = centigrade + 273.15
@@ -77,6 +80,16 @@ def temp_question():
     print("What temperature is it in centigrade?")
     tempOutside = int(input())
     return convert_temperature(tempOutside)
+
+#Task 6: Return value
+
+def add_two_numbers_and_return_value():
+    number1 = 1
+    number2 = 2
+    answer = number1 + number2
+#    return answer
+
+#Practice
 
 def ageRelativeToHRH():
     print("How old are you?")
