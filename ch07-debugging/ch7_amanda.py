@@ -1,12 +1,7 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Dec 14 15:24:20 2018
 
-@author: 612436198
-"""
-"""
-Two potential methods for debugging
-"""
+
+
 ##Using print function
 ##Task 1
 #userInput = input("please give a number")
