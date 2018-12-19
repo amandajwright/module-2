@@ -62,7 +62,7 @@ def phoneNumberInput():
         firstNumber = input("Please type your phone number: ")
         secondNumber = input("Please type your phone number again: ")
         if firstNumber == secondNumber:
-            return (True, secondNumber)#I'm sure this isn't how, but how do you retain the phone number as weel as the 'True' please?
+            return True
         else:
             return False
         

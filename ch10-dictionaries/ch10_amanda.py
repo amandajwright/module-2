@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-DICTIONARIES
+#DICTIONARIES
 
 myFirstDictionary = {"bo":50000, "al":20000, 7:("Joke", "Chen", "Bond")}
 print(myFirstDictionary)
@@ -64,8 +64,8 @@ print(tel)
 one = 1
 two = 2
 three = 3
-variablesAsKeys = {one:123, two:234, three:345}
-print(variablesAsKeys)
+numberDict = {one:123, two:234, three:345}
+print(numberDict)
 
 #Task 4: Get keys and values from a dictionary
 #Getting all the keys or all the values from a dictionary (these methods only work on dictionaries):

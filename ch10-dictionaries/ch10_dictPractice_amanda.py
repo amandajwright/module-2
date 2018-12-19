@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Dec 17 13:39:02 2018
 
-@author: 612436198
-"""
 
 #Practise with dict with function and subfun, variable, user inputs and if/else.
 
