@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Dec  4 11:47:08 2018
 
-@author: 612436198
-"""
 
 ##Generating a random number from a given range and timing how long a function takes to run.
 #
@@ -31,7 +27,7 @@ Created on Tue Dec  4 11:47:08 2018
 #print()
 #print("Program running time: ", round(processTime,2), "seconds")
 
-#Task 3
+##Task 3: Using conditional statements
 
 #number = input("Enter a number between 1 and 10: ")
 #number = int(number) #Converts the input string to an integer.
@@ -45,8 +41,8 @@ Created on Tue Dec  4 11:47:08 2018
 #if 1 <= number <= 10:
 #    print("Thank you!")
 #    
-#Or - in fact preferably:
-
+##Or - in fact preferably: (Task 4: Using else statements)
+#
 #if number > 10:
 #    print("Too high!")
 #
@@ -56,7 +52,7 @@ Created on Tue Dec  4 11:47:08 2018
 #else:
 #    print("Thank you!")
 
-#Task 5.
+##Task 5: Using elif statements
 
 #age = input("How old are you? ")
 #age = int(age) #Converts the input string to an integer.
@@ -72,4 +68,4 @@ Created on Tue Dec  4 11:47:08 2018
 #
 #else:
 #    print("pensioner")
-    
+##NB the order of your if and elif statements is important - put the narrowest class first.   
