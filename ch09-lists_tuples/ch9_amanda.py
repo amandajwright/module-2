@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Dec 13 09:36:56 2018
 
-@author: 612436198
-"""
+
 ##LISTS
+##Task 1: Creat a list
 #my_favourite_fruits = ["apple", "orange", "banana"]
 #
 #x = ["this", 55, "that", my_favourite_fruits]
 #
 ##prints the element at position 3 in the list:
 #print(x[3])
+#
+##you get an error if you try to print an element that doesn't exist:
+#print(x[4])
 #
 ##prints the element at position 1 of the element at position 3 in the list:
 #print(x[3][1])
@@ -21,6 +22,7 @@ Created on Thu Dec 13 09:36:56 2018
 ##you can use negative numbers too (the number it's counting back from is len(list) - so for a list with four elements, position -1 is position (4 - 1) ie position 3):
 #print(x[-1])
 #
+##Task 2: Modify the list
 ##you can remove items from lists (this method only works for lists):
 #x.remove(my_favourite_fruits)
 #print(x)
@@ -75,7 +77,7 @@ Created on Thu Dec 13 09:36:56 2018
 #print(y)
 #print(z)
 #
-##slicing a list:
+##Task 3: Slicing a list:
 #x = ["this", "and", "that", "once", "again"]
 #print(x[1:4])
 ##note this gives you up to but not including position 4. Before colon is inclusive, after colon is exclusive.
@@ -85,8 +87,10 @@ Created on Thu Dec 13 09:36:56 2018
 ##you can also use negatives:
 #print(x[1:-2])
 #print(x[-3:5])
+##If you try to slice using elements that don't exist you won't get an error message, just an empty set of brackets.
 
 ##SORTING LISTS
+##Task 4: Sorting a list
 #x = [7, 11, 3, 9, 2]
 #
 #y = sorted(x)
@@ -123,6 +127,7 @@ Created on Thu Dec 13 09:36:56 2018
 #print(y)
 #
 ##TUPLES
+##Task 5: Using tuples
 #
 ##List example 1:
 #a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -163,6 +168,7 @@ Created on Thu Dec 13 09:36:56 2018
 #print(c)
 
 #lambda stuff
+##Task 6: Create a list of tuples
 
 #x = ["cs", "yw", "hd", "zs", "ab"]
 #y = sorted(x)
