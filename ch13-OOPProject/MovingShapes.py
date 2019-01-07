@@ -16,12 +16,22 @@ class MovingShape:
         self.diameter = diameter
         self.frame = frame
         self.figure = Shape(shape, diameter)
-        self.dx = 5 + 10 * r()
-        self.dy = 5 + 10 * r()
+        self.startDirection()
         self.minMax()
         self.x = self.minx + r() * (self.maxx - self.minx)
         self.y = self.miny + r() * (self.maxy - self.miny)
 
+    def startDirection(self):
+        randomNum = r()
+        if r() > 0.5:
+            self.dx = 5 + 10 * r()
+            self.dy = 5 + 10 * r()
+        else:
+            self.dx = (5 + 10 * r()) * -1
+            self.dy = (5 + 10 * r()) * -1
+        return self.dx, self.dy
+        
+    
     def minMax(self):
         self.minx = self.diameter / 2
         self.miny = self.diameter / 2
@@ -40,12 +50,12 @@ class MovingShape:
 
     def moveTick(self):
         if self.x >= self.maxx or self.x <= self.minx:
-            self.dx = self.dx * -1
+            self.dx = -self.dx
         else:
             self.dx = self.dx
         
         if self.y >= self.maxy or self.y <= self.miny:
-            self.dy = self.dy * -1
+            self.dy = -self.dy
         else:
             self.dy = self.dy
         
