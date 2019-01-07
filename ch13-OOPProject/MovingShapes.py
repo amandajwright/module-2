@@ -25,8 +25,8 @@ class MovingShape:
     def minMax(self):
         self.minx = self.diameter / 2
         self.miny = self.diameter / 2
-        self.maxx = self.frame.width - (self.diameter / 2)
-        self.maxy = self.frame.height - (self.diameter / 2)
+        self.maxx = self.frame.width - self.minx
+        self.maxy = self.frame.height - self.miny
         return self.minx, self.miny, self.maxx, self.maxy
 
     def shapeArea(self):
