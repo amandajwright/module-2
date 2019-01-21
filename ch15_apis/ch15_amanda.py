@@ -7,18 +7,18 @@ Created on Thu Jan 10 14:03:48 2019
 
 #Task 1: Mailgun.
 
-import requests
-
-def send_simple_message():
-    return requests.post(
-        "https://api.mailgun.net/v3/sandboxc71cd092ea784f188f746e55315641de.mailgun.org/messages",
-        auth=("api", "-apikey-"),
-        data={"from": "Excited User <amanda.jane.wright@gmail.com>",
-              "to": ["amanda.2.wright@bt.com"],
-              "subject": "Hello",
-              "text": "Testing some Mailgun awesomness!"})
-    
-send_simple_message()
+#import requests
+#
+#def send_simple_message():
+#    return requests.post(
+#        "https://api.mailgun.net/v3/sandboxc71cd092ea784f188f746e55315641de.mailgun.org/messages",
+#        auth=("api", "-apikey-"), #Where it says '-apikey-' you would actually have an api key but haven't here for security reasons.
+#        data={"from": "Excited User <amanda.jane.wright@gmail.com>",
+#              "to": ["amanda.2.wright@bt.com"],
+#              "subject": "Hello",
+#              "text": "Testing some Mailgun awesomeness!"})
+#    
+#send_simple_message()
 
 #Task 2: A weather app.
 
@@ -36,4 +36,4 @@ response = requests.get(endpoint, params=payload)
 
 data = response.json()
 
-print(data)
+print("In {} there is {}.".format(payload["q"], data["weather"][0]["main"]))

@@ -19,6 +19,8 @@ def create_table():
 
 #create_table()
 
+#Realised (too late) the county column isn't useful/needed, so won't be used from now on.
+
 person_file = open("json/mock_data_people_json.json")
 person_data = json.load(person_file)
 

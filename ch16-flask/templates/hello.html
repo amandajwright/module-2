@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial scale=1.0" />
+
+  <title>My Flask App Page</title>
+
+</head>
+
+<body>
+  {% if name %}
+    <p>
+      Hello {{name}}!
+    </p>
+  {% else %}
+    <p>
+      Hello anonymous person!
+    </p>
+  {% endif %}
+</body>
+
+</html>

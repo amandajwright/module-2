@@ -30,7 +30,7 @@ def data_entry():
 #You created a four-column table, so need four bits of data when inputting.
 #When you run the two functions above, a new database file will be created, with the inputted data in it. Needs to be opened with a database browser.
 
-#Task 2: Add data to your table with variables.
+#Task 2: Add data to your table automatically with variables.
 
 import sqlite3
 import time

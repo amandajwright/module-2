@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial scale=1.0" />
+
+  <title>My Second Flask App Page</title>
+
+</head>
+
+<body>
+  {% if food %}
+  <p>
+    What's for lunch?
+  </p>
+  <p>
+      {{food}}!
+    </p>
+  {% else %}
+    <p>
+      Gonna have to go hungry.
+    </p>
+  {% endif %}
+</body>
+
+</html>
